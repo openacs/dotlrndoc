@@ -1,4 +1,6 @@
-<%= [dotlrn_header "dotLRN Roles, Sections, and Permissions"] %>
+<master src="../master">
+<property name="title">dotLRN Roles, Sections, and Permissions</property>
+
 <h2>dotLRN Permission API</h2>
 by <a href=mailto:ben@openforce.net>Ben Adida</a>.
 <hr><P>
@@ -85,5 +87,3 @@ These are fairly straight-forward:
 <li> <tt>dotlrn::require_user_admin_community community_id ?user_id?</tt>
 
 </ul>
-
-<%= [dotlrn_footer] %>

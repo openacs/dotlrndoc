@@ -1,4 +1,6 @@
-<%= [dotlrn_header "Writing a dotLRN Package"] %>
+<master src="../master">
+<property name="title">Writing a dotLRN Package</property>
+
 <h2>Writing a dotLRN Package</h2>
 by <a href=mailto:ben@openforce.net>Ben Adida</a>.
 <hr><P>
@@ -105,5 +107,3 @@ ad_proc -public dotlrn_bboard::applet_add {community_id} {} {
 	# Instantiate bboard and mount it
 }
 </pre>
-
-<%= [dotlrn_footer] %>

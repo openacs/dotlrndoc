@@ -1,4 +1,6 @@
-<%= [dotlrn_header "dotLRN Roles, Sections, and Permissions"] %>
+<master src="../master">
+<property name="title">dotLRN Roles, Sections, and Permissions</property>
+
 <h2>dotLRN Roles, Sections, and Permissions</h2>
 by <a href=mailto:ben@openforce.net>Ben Adida</a>, part of <a href=./>dotLRN Documentation</a>.
 <hr><P>
@@ -244,5 +246,3 @@ sections. This is a personal view on every piece of user-relevant data.
 <ul>
 <li> Only the user in question can access her main page.
 </ul>
-
-<%= [dotlrn_footer] %>

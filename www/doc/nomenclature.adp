@@ -1,4 +1,6 @@
-<%= [dotlrn_header "dotLRN Nomenclature"] %>
+<master src="../master">
+<property name="title">dotLRN Nomenclature</property>
+
 <h1>dotLRN Nomenclature: a dotLRN Primer</h1>
 by <a href=mailto:ben@openforce.net>Ben Adida</a>, part of <a
 href=./>dotLRN Documentation</a>. (last updated: <i>28 February 2002</i>)
@@ -281,7 +283,4 @@ of "day" for the <tt>calendar_view</tt> parameter.
 
 A portal template is much like any other portal, except that it is
 used as a template for creating other portals.
-
-<%= [dotlrn_footer] %>
-
 

@@ -1,26 +1,13 @@
 <!-- Default style sheet -->
                 p               { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10pt; }
-                body               { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10pt; }
-                h1               { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 20pt; }
-                h2               { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 18pt; }
-                h3               { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14pt; }
-                h4               { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12pt; }
-                a               { color: #CC6600; text-decoration: none; }
-                a:visited       { color: #CC6600; }
-                a:active        { color: #CC6600; }
-                a:hover         { color: #CC6600; text-decoration: underline; }
-                a.link          { color: #CC6600; }
-
-                a.navigation    	{ color: #000000; text-decoration: none; font-weight: bold; }
-                a:hover.navigation      { color: #000000; text-decoration: none; font-weight: bold; background: #CC6600; }
-                a:visited.navigation    { color: #000000; text-decoration: none; font-weight: bold; }
-                a:active.navigation     { color: #000000; text-decoration: none; font-weight: bold; }
-
-                a.navigationnow 	{ color: #FFFFFF; text-decoration: none; font-weight: bold; background: #CC6600; }
-                a:visited.navigationnow { color: #FFFFFF; text-decoration: none; font-weight: bold; background: #CC6600; }
-                a:active.navigationnow  { color: #FFFFFF; text-decoration: none; font-weight: bold; background: #CC6600; }
-                a.readmore      	{ font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 8pt; }
-
+                body            { font-family: Verdana, Arial, Helvetica, sans-serif;
+                                  font-size: 10pt;
+                                  color: black;
+                                  background-color: white;}
+                h1              { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 20pt; }
+                h2              { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 18pt; }
+                h3              { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14pt; }
+                h4              { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12pt; }
                 select          { width: 100pt; background-color: #EFEFEF; border-style: 1px; font-size: 8pt; }
                 option          { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 8pt; }
                 .search         { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 8pt; color: #CC6600; background-color: #EFEFEF;}
@@ -36,7 +23,20 @@
                 div.news        { font-style: normal; font-size: 8pt; margin-left: 1em; }
                 div.highlight   { font-size: 8pt; font-weight: bold; color: #FFFFFF; }
 		div.footer      { font-size: 10pt; }
-		li		{ list-style-image: url(/images/bullet.gif); }
-		li.menu		{ list-style-image: url(/images/bullet.gif); }
 		ul.menu 	{ margin-left: 1em; }
+.note { 
+    font-family: Verdana, Arial, Helvetica, sans-serif; 
+    color: black;
+    background-color: #eeeeee;
+    font-size: 9pt;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+.heading { 
+    font-weight: bold; 
+    font-size: 12pt; 
+    margin-top: 2em;
+}
+
 

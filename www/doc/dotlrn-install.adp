@@ -1,4 +1,5 @@
-<%= [dotlrn_header "Installing dotLRN - OpenForce"] %>
+<master src="../master">
+<property name="title">Installing dotLRN - OpenForce</property>
 
 <div class="indent">
 
@@ -20,13 +21,7 @@
     </ul>
 
 
-    <p class="heading">Read the <a href="dotlrn-faq.adp">dotLRN FAQ</a></p>
-
-    <p class="indent">
-        Especially important is the <a
-        href="dotlrn-faq.adp#development">State of dotLRN
-        Development</a> section.
-    </p>
+    <p class="heading">Read the <a href="/faq">dotLRN FAQs</a></p>
 
     <p class="heading">Get and Install OpenACS from development CVS</p>
 
@@ -40,7 +35,7 @@
        
        If you are installing OpenACS, follow the extensive
        installation <a
-       href="http://openacs.org/doc/openacs-4">documenation</a>.
+       href="http://openacs.org/doc/openacs-4">documentation</a>.
        <strong>Stop</strong> at the <a
        href="http://openacs.org/doc/openacs-4/openacs.html">point</a>
        where the OpenACS installation instructions tell you to
@@ -303,8 +298,7 @@
      Something went wrong. Did you restart your server? Restart again
      while doing a <tt>tail -f</tt> of the error log with debug turned
      on in your AOLServer configuration. Please report all errors you
-     encounter to <a href="mailto:dotlrn@openforce.net"
-     TITLE="Installation Issue">dotlrn@openforce.net</A>
+     encounter to <a href="/bugs">the Bug Tracker</a>.
   </p>
 
   <!-- TODO: re-vamp this section -->
@@ -376,5 +370,3 @@
            section of this document and continue from there.
 
 </div>
-
-<%= [dotlrn_footer] %>

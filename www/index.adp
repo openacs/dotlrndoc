@@ -1,10 +1,4 @@
-<%= [dotlrn_header "dotLRN"] %>
+<master src="./master">
+<property name="title">dotLRN Documentation</property>
 
-<h1>dotLRN</h1>
-<hr><p>
-
-<ul>
-<li> <a href=doc>Documentation</a>.
-</ul>
-
-<%= [dotlrn_footer] %>
+@portal_content@
