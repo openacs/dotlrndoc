@@ -186,6 +186,18 @@
       </pre>
 
     <p class="indent">
+      <font color=red>(NEW! June 30)</font> A few minor modifications
+      of the OpenACS code needs to be done here. First, in the
+      <tt>/openacs-4</tt> directory (where you see the <tt>bin, CVS,
+      packages ...</tt> directories), create a directory named
+      <tt>content-repository-content-files</tt> having the same
+      permissions as the other directories. Second, create a
+      <tt>graphics</tt> directory inside the <tt>www</tt>
+      directory. Third, copy all the files in
+      <tt>/packages/dotlrn/www/graphics</tt> into the
+      <tt>graphics</tt> directory you just created.
+
+    <p class="indent">
       Next, copy the <tt>/openacs-4</tt> directory to where ever you
       prefer your webserver root to be, traditionally
       <tt>/web</tt>. Now you can continue with the OACS <a
