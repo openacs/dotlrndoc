@@ -6,7 +6,7 @@ part of <a href=./>dotLRN Documentation</a>
 This document details the precise steps in moving forward with dotLRN development.
 
 <p>
-Last update: $Id$
+<small>Last update: $Id$</small>
 <p>
 
 <h3>Things to Do</h3>
