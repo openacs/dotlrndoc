@@ -11,6 +11,9 @@ part of <a href=../>dotLRN</a>
 <li> <a href=permission-overview.adp>Roles, Sections, and Permissions</a>
 <li> <a href=permission-portals.adp>Portal Permissions</a>
 <li> <a href=architecture-overview.adp>Architecture Overview</a>
+<p>
+<li> <a href=additional-modules.adp>Sloan - Additional Modules</a>
+
 </ul>
 
 

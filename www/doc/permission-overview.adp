@@ -20,12 +20,19 @@ represented by multiple physical underlying roles and permissions.
 
 <h3>Unregistered Visitor</h3>
 An unregistered visitor is simply a user who browses the dotLRN
-application without login information.
+application without login information. An installation of dotLRN may
+disallow unregistered visitors, if it so chooses.
 
-<h3>Registered Visitor</h3>
-A registered visitor is one who has entered first name, last name,
-email address and password information, and how has logged in using
-those credentials.
+<h3>Registered dotLRN Guest</h3>
+A registered dotLRN guest is a registered user (first name, last name,
+email, password are entered) who has logged in and is using those
+credentials. This user is enabled only for a particular class or club,
+and does not have access to the generic dotLRN workspace.
+
+<h3>Registered dotLRN User</h3>
+A registered dotLRN user is a registered user how has logged in using
+those credentials. A dotLRN user can browse all available public
+classes and clubs.
 
 <h3>Registered Student of an Instance of a Class</h3>
 A registered student of a class is one who has requested association
@@ -81,7 +88,8 @@ information material, with very little interactivity of any kind.
 <p>
 <h4>Permissions</h4>
 <ul>
-<li> All users can access this section
+<li> All registered dotLRN users can access this section
+<li> Guests or unregistered visitors cannot access this section
 </ul>
 
 
@@ -98,7 +106,8 @@ with links to the proper instance-specific sections.
 <p>
 <h4>Permissions</h4>
 <ul>
-<li> All users can access this section
+<li> All registered dotLRN users can access this section
+<li> All guests of <b>that</b> class can access this section
 <li> Registered users associated with a class instance of this class
 will see specific links to the proper class instances
 </ul>
@@ -140,9 +149,12 @@ request registration for the class.
 <p>
 <h4>Permissions</h4>
 <ul>
-<li> All registered users can access this section
-<li> Only registered users associated with this class instance can
+<li> All registered dotLRN users can access this section
+<li> Guests for this class instance can see this section
+<li> Only registered users and guests associated with this class instance can
 access the full functionality
+<li> Certain functionality (like class rosters) are only accessible to
+full users, not to guests
 </ul>
 
 <h3>Per-Class-Instance Admin Page</h3>
@@ -201,7 +213,8 @@ see basic community information.
 <p>
 <h4>Permissions</h4>
 <ul>
-<li> All registered users can access this section
+<li> All registered dotLRN users can access this section
+<li> Guests of this specific community can access this section
 <li> Only members of the community at hand can access
 community-specific chunks/links
 </ul>
