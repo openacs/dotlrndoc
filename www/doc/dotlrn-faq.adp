@@ -102,49 +102,32 @@
         exactly which OpenACS tarball or other package you'll
         be able to use.
 
-    <p class="question">Q: Wait, why isn't it compatible with PostgreSQL?   
+    <p class="question">Q: When will dotLRN be compatible with PostgreSQL?   
     <p class="answer">
 
-        We have focused our initial development on Oracle
-        compatibility for MIT Sloan. We have made significant headway
-        in PostgreSQL compatibility, and we (OpenForce) intend to use
-        dotLRN on PostgreSQL. Full PostgreSQL support is imminent, and
-        all progress will immediately appear in the CVS tree.
+        PostgreSQL compatibility porting continues rapidly and will be
+	completed in the coming weeks. A partial port is in the CVS
+	tree, with more progress daily.
     
     <p class="question">Q: Can I use ACS Classic 4.2/4.3? 
     <p class="answer">
     
-        You can try, but we haven't done any testing with ACS Classic,
-	nor do we intend to. We suspect that the numerous improvements
-	made to OpenACS over the past few months will make dotLRN
-	<b>incompatible</b> with ACS Classic.
-    
+        Due to numerous fixes and enhancements made by the OpenACS
+	developers, dotLRN will <strong>not</strong> work with ACS
+	Classic. However, ACS Classic and OpenACS are similar enough
+	so that code and skills based on one are very transferable
+	to the other.
+	    
     <p class="question">Q: Can I get a tarball of the dotLRN CVS?
     <p class="answer">
     
-        Yes, with major caveats. We don't make up-to-date tarballs of
-	the code regularly during this early phase of development.
-	Currently, dotLRN CVS requires the most recent OpenACS
-	development CVS, both of which change on a daily basis. This
-	means that unless you have up-to-date CVS from both sources,
-	chances are good that your dotLRN installation <strong>will
-	not function</strong>! And since the dotLRN tarball below is
-	not up-to-date, it won't function either. So why offer it for
-	download at all? Well, the only use for this is if you want to
-	read not quite the latest code but not actually use it.
+       Contact us at <a
+       href=mailto:dotlrn@openforce.net>dotlrn@openforce.net</a> if 
+       you are interested in a tarball.
+       
 
-    <p class=answer>
-    
-        Please <strong>don't tell us this dosen't work</strong>. We
-	already know that. :) Also, remember there is <strong>NO
-	BACKWARDS COMPATIBILITY</strong> with this code.
-
-	<a href=../dotlrn-core-apr-3.tar.gz><tt>dotlrn-core-apr-3.tar.gz</tt></a>
-
-
-
-    <p class=heading><a class=plain name=openforce>
-    The OpenForce Role in dotLRN</a>
+    <p class=heading><a class=plain name=openforce> The OpenForce Role
+    in dotLRN</a>
   
     <p class="question">
     Q: What's the relationship between MIT Sloan and OpenForce? 
@@ -217,9 +200,10 @@
     <p class="answer">
 
     It's sometimes written as <tt>.LRN</tt>, but the spelling and
-    capitalization <tt>dotLRN</tt> is preferred. <tt>dotLRN</tt> is
-    pronounced &quot;daught-learn&quot; We are currently accepting
-    voice applications for the dotLRN MP3 pronounciation file.
+    capitalization <tt>dotLRN</tt> is preferred. hackers who type a
+    lot usually write <tt>dotlrn</tt>. <tt>dotLRN</tt> is pronounced
+    &quot;daught-learn&quot; We are currently accepting voice
+    applications for the dotLRN MP3 pronounciation file.
 
 </div>
 <%= [dotlrn_footer] %>
