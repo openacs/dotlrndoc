@@ -10,48 +10,34 @@ This document details the precise steps in moving forward with dotLRN developmen
 <h3>Portals Enhancements - Urgent</h3>
 <ul>
 
-<strike><li> Make all explicitly-sourced Tcl scripts into procs. Fix
-templates.</strike>
+<strike><li> user-editable placement of portlets. Allow any portal
+page to jump into "editing" of the portal page (if the user has
+permission to do so).</strike>
 
-<P>Only one tcl script is explicitly sourced:
-<tt>www/render-element.tcl</tt>. I've looked at this, and I don't see how it
-can be changed at the moment. I'm moving on.
+<P>Works! In BETA Oct. 24
 
-<P>Further clean up (not altering functionality) of the display code and
-templates will be ONGOING.
+<strike><li> remove all user_id information from a portal page. We want to
+regulate access using the permissions module, and there is no need to
+map to a user inside the portals package.  
 
-<strike><li> fix the path to template finding for each portal element (no symlink!)</strike>
-
-<strike><li> fix the parameter setting (specifically in bboard)</strike>
-
-<P>Fixed in all portlets.
-
-<li> user-editable placement of portlets. Allow any portal page to jump into "editing" of the portal page (if the user has permission to do so).
-
-<P>ALPHA by Oct. 25
-
-<li> remove all user_id information from a portal page. We want to regulate access using the permissions module, and there is no need to map to a user inside the portals package.
-<li> add permissions checking to each portal page displaying.
+<li> add permissions checking to each portal page displaying.</strike>
 	
-<P><a href=permission-portals.adp>Perms scheme complete</a> ALPHA by Oct. 25
+<P><a href=permission-portals.adp>Perms scheme complete</a> 
+
+<P> Done except for parts that depend on "cloning", "locks", etc. One portal proc (create) uses user_id. In ALPHA Oct. 24
+
 </ul>
 
-
-
+<h3>Portals Enhancements - Less Urgent</h3>
 <ul>
 
-<h3>Portals Enhancements - Less Urgent</h3>
+<li> layout change - AKS: thinging about interaction with below
+<li> "cloning" - add the ability to have a model layout that can be copied. For example, a class admin will set up a portal the way it's supposed to look when someone signs into the class. This layout will be copied for a user. But then the user can change the portal.
 
-<li> allow layout to be changed by user
-<li> add the ability to have a model layout that can be copied. For example, a class admin will set up a portal the way it's supposed to look when someone signs into the class. This layout will be copied for a user. But then the user can change the portal.
+<li> "locks" - However, some portal elements will be "unremovable", mandatory in some sense. The way this works is that each portal element in the "model" layout will carry permission models that will be copied over when a new portal page is created based on the model. Thus permissions must exist on a per-portal element level. Maybe for displaying, and at least for adding / removing.
 
-<P>AKS: There is only one special, "clonable" portal per-instance, right?
 
-<li> However, some portal elements will be "unremovable", mandatory in some sense. The way this works is that each portal element in the "model" layout will carry permission models that will be copied over when a new portal page is created based on the model. Thus permissions must exist on a per-portal element level. Maybe for displaying, and at least for adding / removing.
-
-<P>AKS: "locks" in PEM
-
-<li> This means that we need to rethink how data sources are made available to a portal. Maybe via permissioning. How does a user get to add a data-source to a portal or not?<p>
+<li> "available PEs" - This means that we need to rethink how data sources are made available to a portal. Maybe via permissioning. How does a user get to add a data-source to a portal or not?<p>
 <b>What Ben means</b>: we have data sources in the overall system, say bboard, faq, and fs. However, to page #123, only bboard and faq are *available* as potential data sources. The dotlrn-bboard package will first make the bboard datasource AVAILABLE to the page in question, and then will actually add it. Thus, when removed, the datasource remains available to be re-added.
 <p>
 <b>More on removing portal elements</b>: anyone with page-level permissions (which permission exactly is yet to be determined) can add available data sources to the given page. Each portal element that is added by the user will automatically gain the permission to be removed. However, some portal elements added programmatically might not be removable by the viewing user.
@@ -89,6 +75,29 @@ templates will be ONGOING.
 
 <h3>File Storage</h3>
 
-<h3>Surveys</h3>
+<h3>Old Items</h3>
+
+<ul>
+<strike><li> Make all explicitly-sourced Tcl scripts into procs. Fix
+templates.</strike>
+
+<P>Two tcl scripts are explicitly sourced:
+<tt>www/render-element.tcl</tt> and <tt>www/place-element.tcl</tt>
+which is the configuration analogue of the former. Users of the portal
+package have <b>no knowledge</b> of these scripts, they only use the
+Tcl API. I've looked at this, and I don't see how it can be changed at
+the moment because of the way the templating system works. I'm moving
+on.
+
+<strike><li> fix the path to template finding for each portal element (no symlink!)</strike>
+
+<strike><li> fix the parameter setting (specifically in bboard)</strike>
+
+<P>Fixed in all portlets.
+
+
+</ul>
+
+
 
 <%= [dotlrn_footer] %>
