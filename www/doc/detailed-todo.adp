@@ -7,6 +7,33 @@ This document details the precise steps in moving forward with dotLRN developmen
 
 <p>
 
+<h3>Things to Do - Week of October 29th</h3>
+<b>Arjun</b>:
+<ul>
+<li> "available" portlets: data-model, Tcl API, and web pages
+<li> think about parameter setting for portlets (return_url?)
+<li> implement shade, remove, edit, link from title
+<li> overview of survey - get it working as a package and as a dotlrn applet
+<li> overview of file-storage - verify working, think about UI improvements
+</ul>
+
+<p>
+
+<b>Ben</b>:
+<ul>
+<li> data model for dotLRN workspace
+<li> updates to applet interface as a result
+<li> managing classes, profs, etc...
+</ul>
+
+<p>
+
+<b>both</b>:
+<ul>
+<li> cloning discussion
+<li> workspace discussion
+</ul>
+
 <h3>Portals Enhancements - Urgent</h3>
 <ul>
 
