@@ -60,7 +60,7 @@
       
     <p class="note">
       CVS commandlines are given in terms of anonymous users, if you have an
-      account on openacs.org, use your login where appropriate. Don't forget to 
+      account on openacs.org, use your login where appropriate. Don't forget to
       set the CVS_RSH variable in your shell envrioment to &quot;ssh&quot;.
 
     <p class="indent">
@@ -72,19 +72,21 @@
     <p class="indent">
       Here's the current list of non-core packages needed for dotlrn:
 
+    <p class="indent">
+	<font color=red>NEW!</font> forums replaces bboard and sloan-bboard
+
       <pre>
       acs-datetime 
       acs-events
-      acs-interface
       acs-mail-lite
       bulk-mail
       calendar
       faq
+      forums
       file-storage
       general-comments
       news
       ref-timezones
-      simple-survey
       </pre>      
 
       <strong>Do not install or remove</strong> these packages since they conflict
@@ -104,8 +106,8 @@
 
       <pre>      
       cvs -z3 -d :pserver:anonymous@openacs.org:/cvsroot co acs-datetime \
-      acs-events acs-interface acs-mail-lite bulk-mail calendar faq file-storage \
-      general-comments news ref-timezones simple-survey
+      acs-events acs-mail-lite bulk-mail calendar faq file-storage \
+      general-comments news ref-timezones
       </pre>
 
     <p class="note">
@@ -143,6 +145,10 @@
       <tt>/openacs-4/packages</tt> directory:
 
     <p class="indent">
+	<font color=red>NEW!</font> forums-portlet and dotlrn-forums
+	replaces bboard-portlet and dotlrn-bboard
+
+    <p class="indent">
 
       <pre>
         dotlrn
@@ -152,8 +158,6 @@
         profile-provider
         sloan-bboard
         user-profile
-        bboard-portlet
-        dotlrn-bboard
         bm-portlet 
         dotlrn-bm
         calendar-portlet
@@ -162,14 +166,14 @@
         dotlrn-dotlrn
         faq-portlet
         dotlrn-faq
+	forums-portlet
+	dotlrn-forums
         fs-portlet
         dotlrn-fs
         news-portlet
         dotlrn-news
         static-portlet
         dotlrn-static
-        survey-portlet
-        dotlrn-survey
       </pre>
 
     <p class="indent">
@@ -244,7 +248,8 @@
 
   <p class="indent">
 
-     <strong>One last step</strong>: Then set the &quot;DefaultMaster&quot; parameter
+     <strong>One last step</strong>: Then set the
+     &quot;DefaultMaster&quot; parameter
      of the Root (&quot;Main site&quot;) from
      <tt>/www/default-master</tt> to
      <tt>/packages/dotlrn/www/dotlrn-default-master</tt>
@@ -293,6 +298,12 @@
      
      Sometimes you have to dump your DB. Here's the dotLRN reinstall
      process.
+
+    <p class="indent">
+	<strong>Important note:</strong>If you have the dotlrn-survey,
+	and/or survey-portlet directories on your system, please delete them as
+	they are no longer part of the <tt>dotlrn-core</tt> packages. If you	
+	are not using simple-survey aside from dotlrn, you can delete that too.
 
      <ol>
        <li>Stop <tt>aolserver</tt> and any open <tt>sqlplus</tt>
