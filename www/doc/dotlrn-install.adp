@@ -73,6 +73,9 @@
       Here's the current list of non-core packages needed for dotlrn:
 
     <p class="indent">
+	<font color=red>NEW!</font>Added stuff the list below. (June 13)
+
+    <p class="indent">
 	<font color=red>NEW!</font>the new <tt>notifications</tt> package
 	is required by the new <tt>forums</tt> package (which replaces
 	<tt>bboard</tt> and <tt>sloan-bboard</tt>)
