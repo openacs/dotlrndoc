@@ -15,15 +15,18 @@ This document details the precise steps in moving forward with dotLRN developmen
 <P>
 Now:
 <ul>
-<li> edit calendar_portlet::show for different views
+<strike>
 <li> impliment dotlrn-news and news-portlet
 <li> impliment theme change in portal::config
 <li> add buttons to "red box" theme
-<li> add optional theme_id args to portal::render
+<li> impliment "unshade" icons in both themes
+</strike>
 </ul>
 
 Later:
 <ul>
+<li> add optional theme_id args to portal::render
+<li> edit calendar_portlet::show for different views - ugly!
 <li> acs-service-contract
 <li> impliment dotlrn-survey and survey-portlet
 <li> overview of file-storage - think about UI improvements
