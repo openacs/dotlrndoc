@@ -158,14 +158,14 @@
 
     <p class="indent">
       This will fetch the following packages to your
-      <tt>/openacs-4/packages</tt> directory:
+      <tt>/openacs-4/packages</tt> directory<BR>
+      <font color=red>(Updated July 29: added research-portlet)</font>:
 
     <p class="indent">
 
       <pre>
         dotlrn
         dotlrn-syllabus
-        dotlrn-research
         new-portal
         profile-provider
         user-profile
@@ -183,6 +183,8 @@
         dotlrn-fs
         news-portlet
         dotlrn-news
+        research-portlet
+        dotlrn-research
         static-portlet
         dotlrn-static
       </pre>
