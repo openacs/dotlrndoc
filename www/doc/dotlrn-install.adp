@@ -23,20 +23,17 @@
     <p class="heading">Read the <a href="dotlrn-faq.adp">dotLRN FAQ</a></p>
 
     <p class="indent">
-
         Especially important is the <a
         href="dotlrn-faq.adp#development">State of dotLRN
         Development</a> section.
-
     </p>
 
     <p class="heading">Get and Install OpenACS from development CVS</p>
 
     <p class="note">
-
        If you have a working OpenACS installation from the latest
-       development CVS, skip to the next section.
-
+       development CVS, make sure that you have all the packages required
+       below then skip to the next section.
     </p>
 
     <p class="indent">
@@ -73,55 +70,60 @@
       Here's the current list of non-core packages needed for dotlrn:
 
     <p class="indent">
-        <font color=red>NEW! (June 13)&nbsp;</font>the new
-        <tt>notifications</tt> package is required by the new
-        <tt>forums</tt> package (which replaces <tt>bboard</tt> and
-        <tt>sloan-bboard</tt>)
+      <font color=red>NEW! (June 19)</font> <tt>notifications</tt> is
+      a new service package that is used by the new <tt>forums</tt>
+      package. The new <tt>forums</tt> package will not conflict with
+      the <tt>bboard</tt> package. The <tt>bboard</tt> package is not
+      reqiured for dotlrn.
 
       <pre>
-      acs-datetime 
+      acs-datetime
+      acs-developer-support (optional)
       acs-events
       acs-mail-lite
       bulk-mail
       calendar
       faq
-      forums
       file-storage
+      forums
       general-comments
       news
       notifications
       ref-timezones
       user-preferences
-      developer-support (optional)
       </pre>      
     </p>
 
-    <p class="indent">
+    <p class="note">
       <strong>Do not install</strong> or <strong>remove</strong> these
-        packages since they conflict with dotlrn packages:
-
-      <pre>
-      portal (conflicts with new-portal)
-      spam (conflicts with bulk-mail)      
-      </pre>     
+        packages since they conflict with dotlrn packages: <tt>portal</tt>
+	(conflicts with new-portal) and <tt>spam</tt>
+	(conflicts with bulk-mail)
     </p>
 
     <p class="indent">
       <tt>cd</tt> to the newly created <tt>/openacs-4/packages</tt>
-      directory before the next step.
+      directory before the next command.
 
     <p class="indent">
       <pre> 
-      cvs -z3 -d :pserver:anonymous@openacs.org:/cvsroot co
-      acs-datetime \ acs-events acs-mail-lite bulk-mail calendar faq
-      forums file-storage \ general-comments news notifications
-      ref-timezones user-preferences \ developer-support
+      cvs -z3 -d :pserver:anonymous@openacs.org:/cvsroot co \
+      acs-datetime acs-developer-support acs-events acs-mail-lite \
+      bulk-mail calendar faq file-storage forums general-comments news \
+      notifications ref-timezones user-preferences
       </pre>
 
+    <p class="note">
+       Installation timesaver: In the <tt>/packages/ref-timezones/sql/common/</tt>
+       directory, cut down the files to a few <tt>insert</tt> statements apeace.
+       This is fine for test system, and will save you alot of time in the
+       installation process.
+
     <p class="indent">
-      <font color=red>NEW! (June 16)&nbsp;</font>You have to make one
-        minor modification to the OpenACS sources for dotlrn to work
-        properly. Comment out <strong>ALL</strong> the code in
+      <font color=red>NEW! (June 16)</font> You have to make one minor
+        modification to the OpenACS sources for dotlrn to work
+        properly. Comment out the
+        <tt>file_storage_post_instantiation</tt> procedure in
         <kbd>/packages/file-storage/tcl/file-storage-init.tcl</kbd>
 
     <p class="note">
@@ -136,8 +138,22 @@
         working on a permanent solution to this.
 
     <p class="indent">
-      You will now have an <tt>/openacs-4</tt> directory with all of OpenACS
-      required by dotLRN. 
+      You will now have an <tt>/openacs-4</tt> directory with all of
+      OpenACS required by dotLRN. To double check, your
+      <tt>/openacs-4/packages</tt> directory should look similar to this:
+
+      <pre>
+        $ ls
+        acs-admin		 acs-kernel	       acs-templating  general-comments
+        acs-api-browser		 acs-mail	       acs-util        news
+        acs-bootstrap-installer  acs-mail-lite	       acs-workflow    notifications
+        acs-content		 acs-messaging	       bulk-mail       page
+        acs-content-repository	 acs-notification      calendar        ref-timezones
+        acs-core-docs		 acs-reference	       CVS	       search
+        acs-datetime		 acs-service-contract  faq	       skin
+        acs-developer-support	 acs-subsite	       file-storage    user-preferences
+        acs-events		 acs-tcl	       forums
+      </pre>
 
     <p class="heading">Get dotLRN from CVS</p>
 
@@ -159,11 +175,6 @@
     <p class="indent">
       This will fetch the following packages to your
       <tt>/openacs-4/packages</tt> directory:
-
-    <p class="indent">
-	<font color=red>NEW!</font> <tt>forums-portlet</tt> and
-	<tt>dotlrn-forums</tt> replaces <tt>bboard-portlet</tt>
-	and <tt>dotlrn-bboard</tt>
 
     <p class="indent">
 
@@ -207,14 +218,14 @@
      Go the the &quot;ACS Package Manager&quot; (APM) on your system
      at <tt>http://yourserver/acs-admin/apm</tt> and hit the
      &quot;Install packages&quot; link. After the installer loads, you
-     will see a list of the dotlrn packages you just got from
-     CVS. Install them, return to the main APM page, and <b>restart
-     your server</b>. 
+     will see a list of the packages you just got from CVS. Click the
+     button at the bottom of the page to Install them. You do not
+     have to restart your server at ths point.
   </p>
 
   <p class="indent">
   
-     Go to the &quot;Site Map&quot; on your system at
+     Next go to the &quot;Site Map&quot; on your system at
      <tt>http://yourserver/admin/site-map</tt>. Click the &quot;new
      sub folder&quot; link to the right of the &quot;Main Site&quot;
      link at the top of the table. Enter <tt>dotlrn</tt> in the
@@ -239,14 +250,49 @@
      the right of the &quot;dotlrn/&quot; URL.
   
   </p>
+
+  <p class="indent">
+
+     <font color=red>NEW! (June 20)</font> Install the
+     &quot;notifications&quot; application at the URL
+     &quot;/notifications&quot; the same way you installed
+     &quot;dotlrn&quot;
+     
+  </p>
+
+  <!-- Add note about developer-support here -->
   
   <p class="indent">
+
+     Next you must set some parameters from the <tt>Site Map</tt>
+     page. 
+
+     <ul>
+     
+     <li>For the &quot;Main site&quot; (the first row of the table at
+     the top of the page), set the &quot;DefaultMaster&quot; parameter
+     from <tt>/www/default-master</tt> to
+     <tt>/packages/dotlrn/www/dotlrn-default-master</tt>.
+
+     <li>For the <tt>ACS Kernel</tt> (the first item in the list below
+     the table) in the <tt>system-information</tt> section, set the
+     <tt>CommunityMemberURL</tt> from <tt>/shared/community-member</tt> to
+     <tt>/dotlrn/community-member</tt>
+
+     <li>In the same <tt>system-information</tt> section, set the
+     <tt>CommunityMemberAdminURL</tt> from <tt>/acs-admin/users/one</tt> to
+     <tt>/dotlrn/admin/user</tt>
+
+     </ul>
+  </p>
+
+  <p class="indent">
   
-     <b>You must now restart your server, wait, and reload the
-     &quot;Site Map&quot; page in your browser</b> After the server
-     restarts, refresh the &quot;Site Map&quot;. You will see a
-     &quot;(+)&quot; to the left of the dotlrn/ URL and a new URL:
-     &quot;portal/&quot; with application &quot;new-portal&quot;.
+     <b>You must now restart your server, wait a few minutes, and
+     reload the &quot;Site Map&quot; page in your browser</b> After
+     the server restarts, refresh the &quot;Site Map&quot;. You will
+     see a &quot;(+)&quot; to the left of the dotlrn/ URL and a new
+     URL: &quot;portal/&quot; with application &quot;new-portal&quot;.
 
   </p>
 
@@ -254,22 +300,10 @@
 
      Aren't seeing the &quot(+)&quot; beside <tt>dotlrn/</tt>?
      Something went wrong. Did you restart your server? Restart again
-     while doing a <tt>tail -f</tt> of the error log. <tt>Unique constraint
-     violations</tt> while creating certain site-nodes are a known issue,
-     but any other errors should be reported to us.
-
-  </p>
-
-  <!-- TODO: Add note about developer-support here -->
-
-  <p class="indent">
-
-     <strong>One last step</strong>: Then set the
-     &quot;DefaultMaster&quot; parameter
-     of the Root (&quot;Main site&quot;) from
-     <tt>/www/default-master</tt> to
-     <tt>/packages/dotlrn/www/dotlrn-default-master</tt>
-
+     while doing a <tt>tail -f</tt> of the error log with debug turned
+     on in your AOLServer configuration. Please report all errors you
+     encounter to <a href="mailto:dotlrn@openforce.net"
+     TITLE="Installation Issue">dotlrn@openforce.net</A>
   </p>
 
   <!-- TODO: re-vamp this section -->
