@@ -70,10 +70,11 @@
       Here's the current list of non-core packages needed for dotlrn:
 
     <p class="indent">
-      <font color=red>NEW! (June 19)</font> <tt>notifications</tt> is
+      <font color=red>UPDATED (July 9)</font> <tt>attachments</tt> is
       a new service package that is used by the new <tt>forums</tt>
-      package. The new <tt>forums</tt> package will not conflict with
-      the <tt>bboard</tt> package. The <tt>bboard</tt> package is not
+      package and the <tt>calendar</tt> package. The new
+      <tt>forums</tt> package will not conflict with the
+      <tt>bboard</tt> package. The <tt>bboard</tt> package is not
       reqiured for dotlrn.
 
       <pre>
@@ -81,6 +82,7 @@
       acs-developer-support (optional)
       acs-events
       acs-mail-lite
+      attachments
       bulk-mail
       calendar
       faq
@@ -116,7 +118,7 @@
     <p class="note">
        Installation timesaver: In the <tt>/packages/ref-timezones/sql/common/</tt>
        directory, cut down the files to a few <tt>insert</tt> statements apiece.
-       This is fine for test system, and will save you alot of time in the
+       This is fine for test system, and will save you a lot of time in the
        installation process.
 
     <p class="indent">
@@ -186,7 +188,8 @@
       </pre>
 
     <p class="indent">
-      <font color=red>(UPDATED! July 9)</font> A few minor
+
+      <font color=red>(UPDATED July 9)</font> A few minor
       modifications of the OpenACS code needs to be done here. First,
       in the <tt>/openacs-4</tt> directory (where you see the <tt>bin,
       CVS, packages ...</tt> directories), make sure a directory named
@@ -247,9 +250,10 @@
 
   <p class="indent">
 
-     <font color=red>NEW! (June 20)</font> Install the
-     &quot;notifications&quot; application at the URL
-     &quot;/notifications&quot; the same way you installed
+     <font color=red>UPDATED (July 9)</font> Install the
+     &quot;notifications&quot; and &quot;attachments&quot; packages at
+     the URL &quot;/notifications&quot; and
+     &quot;/attachments&quot;the same way you installed
      &quot;dotlrn&quot;
      
   </p>
