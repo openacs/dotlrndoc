@@ -111,7 +111,7 @@
       <pre> 
       cvs -z3 -d :pserver:anonymous@openacs.org:/cvsroot co \
       acs-datetime acs-developer-support acs-events acs-mail-lite \
-      attachments bulk-mail calendar faq file-storage forums general-comments 
+      attachments bulk-mail calendar faq file-storage forums general-comments \
       news notifications ref-timezones user-preferences
       </pre>
 
