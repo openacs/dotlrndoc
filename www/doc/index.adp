@@ -9,6 +9,7 @@ part of <a href=../>dotLRN</a>
 <p>
 <li> <a href=nomenclature.adp>Nomenclature</a>
 <li> <a href=permission-overview.adp>Roles, Sections, and Permissions</a>
+<li> <a href=permission-portals.adp>Portal Permissions</a>
 <li> <a href=architecture-overview.adp>Architecture Overview</a>
 </ul>
 
