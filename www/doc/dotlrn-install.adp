@@ -111,8 +111,8 @@
       <pre> 
       cvs -z3 -d :pserver:anonymous@openacs.org:/cvsroot co \
       acs-datetime acs-developer-support acs-events acs-mail-lite \
-      bulk-mail calendar faq file-storage forums general-comments news \
-      notifications ref-timezones user-preferences
+      attachments bulk-mail calendar faq file-storage forums general-comments 
+      news notifications ref-timezones user-preferences
       </pre>
 
     <p class="note">
@@ -126,18 +126,18 @@
       OpenACS required by dotLRN. To double check, your
       <tt>/openacs-4/packages</tt> directory should look similar to this:
 
-      <pre>
-        $ ls
-        acs-admin                acs-kernel            acs-templating  general-comments
-        acs-api-browser          acs-mail              acs-util        news
-        acs-bootstrap-installer  acs-mail-lite         acs-workflow    notifications
-        acs-content              acs-messaging         bulk-mail       page
-        acs-content-repository   acs-notification      calendar        ref-timezones
-        acs-core-docs            acs-reference         CVS             search
-        acs-datetime             acs-service-contract  faq             skin
-        acs-developer-support    acs-subsite           file-storage    user-preferences
-        acs-events               acs-tcl               forums
-      </pre>
+    <pre>
+      $ ls
+      acs-admin                acs-kernel            acs-templating  forums
+      acs-api-browser          acs-mail              acs-util        general-comments
+      acs-bootstrap-installer  acs-mail-lite         acs-workflow    news
+      acs-content              acs-messaging         attachments     notifications
+      acs-content-repository   acs-notification      bulk-mail       page
+      acs-core-docs            acs-reference         calendar        ref-timezones
+      acs-datetime             acs-service-contract  CVS             search
+      acs-developer-support    acs-subsite           faq             skin
+      acs-events               acs-tcl               file-storage    user-preferences
+    </pre>
 
     <p class="heading">Get dotLRN from CVS</p>
 
