@@ -1,4 +1,5 @@
-<%= [dotlrn_header "dotLRN Architecture"] %>
+<master src="../master">
+<property name="title">dotLRN Architecture</property>
 <h2>dotLRN Architecture</h2>
 by <a href=mailto:ben@openforce.net>Ben Adida</a> and <a href=arjun@openforce.net>Arjun Sanyal</a>, part of <a href=./>dotLRN Documentation</a>.
 <hr><p>
@@ -183,6 +184,3 @@ and thus clean up the actions of AddUserToCommunity.
 
 The specifics of creating a dotLRN package are described in the <a
 href=writing-a-dotlrn-package.adp>dotLRN Package Creation Guide</a>.
-
-
-<%= [dotlrn_footer] %>

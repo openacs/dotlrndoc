@@ -1,4 +1,5 @@
-<%= [dotlrn_header "dotLRN FAQ"] %>
+<master src="../master">
+<property name="title">dotLRN FAQ</property>
 <div class="indent">
 
     <h2>The dotLRN FAQ</h2>
@@ -206,4 +207,3 @@
     applications for the dotLRN MP3 pronounciation file.
 
 </div>
-<%= [dotlrn_footer] %>
