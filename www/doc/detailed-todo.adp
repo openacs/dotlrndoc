@@ -6,7 +6,7 @@ part of <a href=./>dotLRN Documentation</a>
 This document details the precise steps in moving forward with dotLRN development.
 
 <p>
-<small>Last update: $Id$</small>
+<font size=-2>Last update: $Date$</font>
 <p>
 
 <h3>Things to Do</h3>
@@ -15,29 +15,19 @@ This document details the precise steps in moving forward with dotLRN developmen
 <P>
 Now:
 <ul>
-<strike>
-<li> impliment dotlrn-news and news-portlet
-<li> impliment theme change in portal::config
-<li> add buttons to "red box" theme
-<li> impliment "unshade" icons in both themes
-</strike>
+Check left-to-finish core
 </ul>
 
 Later:
 <ul>
-<li> add optional theme_id args to portal::render
-<li> edit calendar_portlet::show for different views - ugly!
-<li> acs-service-contract
-<li> impliment dotlrn-survey and survey-portlet
-<li> overview of file-storage - think about UI improvements
 </ul>
 
 <p>
 
 <b>Ben</b>:
 <ul>
-<li> data model for dotLRN workspace
-<li> updates to applet interface as a result
+<li> <strike>data model for dotLRN workspace</strike>
+<li> <strike>updates to applet interface as a result</strike>
 <li> managing classes, profs, etc...
 </ul>
 
@@ -140,6 +130,14 @@ on.
 <strike><li> "available" portlets: data-model, Tcl API, and web pages</strike>
 <strike><li> implement shade, remove, edit, link from title</strike>
 
+<strike>
+<li> impliment dotlrn-news and news-portlet
+<li> impliment theme change in portal::config
+<li> add buttons to "red box" theme
+<li> impliment "unshade" icons in both themes
+<li> add optional theme_id args to portal::render
+<li> edit calendar_portlet::show for different views - ugly!
+</strike>
 </ul>
 
 

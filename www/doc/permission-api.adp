@@ -9,6 +9,45 @@ permission scheme can change.
 
 <p>
 
+<h3>Relational Segments & Context IDs</h3>
+
+In order to make things much cleaner with respect to permissions, we
+use relational segments and context IDs. The goal of relational
+segments will be to determine groups of users to whom permissions
+are granted. The goal of context IDs will be to create a hierarchy of
+objects so that as new components are added to subcommunities,
+permissions are naturally extended in appropriate ways.
+
+<p>
+
+For this to work, the actual privileges used throughout dotLRN and all
+of its modules must be <b>consistent</b>. Since permissions follow an
+inheritance path, we must make sure everything bootstraps off the
+basic read, write, create, delete, admin privileges.
+
+<p>
+
+To better explain the situation, we want the following to happen:
+<ul>
+<li> Hal is a member of "Intro to Computer Science Spring 2002" group, with relationship
+type <tt>dotlrn_instructor_rel</tt> to that group.
+<li> An FAQ about the Computer Science Program is created for "Intro
+to Computer Science Spring 2002", with <tt>context_id</tt> pointing to
+the course.
+<li> A relational segment "Intro to CS Spring 2002 Instructors" is
+created on the "Intro to CS Spring 2002" group and
+<tt>dotlrn_instructor_rel</tt> relationship type.
+<li> The privilege <tt>faq_admin</tt> exists, inheriting from
+the core OpenACS <tt>admin</tt> privilege.
+<li> A permission is granted: "Intro to CS Spring 2002 Instructors"
+are given the <tt>admin</tt> privilege on the course "Intro to
+CS Spring 2002".
+<li> <b>Thus</b>, automatically, Hal has the right to admin the FAQ,
+because the admin privilege translates to the faq_admin privilege by
+inheritance, Hal is part of the relational segment in question, and
+the FAQ in question has a context_id pointing to the course. It's BEAUTIFUL!
+</ul>
+
 <h3>General Roles API</h3>
 
 These are fairly straight-forward:
