@@ -6,15 +6,27 @@ part of <a href=./>dotLRN Documentation</a>
 This document details the precise steps in moving forward with dotLRN development.
 
 <p>
+Last update: $Id$
+<p>
 
-<h3>Things to Do - Week of October 29th</h3>
+<h3>Things to Do</h3>
 <b>Arjun</b>:
+
+<P>
+Now:
 <ul>
-<li> "available" portlets: data-model, Tcl API, and web pages
-<li> think about parameter setting for portlets (return_url?)
-<li> implement shade, remove, edit, link from title
-<li> overview of survey - get it working as a package and as a dotlrn applet
-<li> overview of file-storage - verify working, think about UI improvements
+<li> edit calendar_portlet::show for different views
+<li> impliment dotlrn-news and news-portlet
+<li> impliment theme change in portal::config
+<li> add buttons to "red box" theme
+<li> add optional theme_id args to portal::render
+</ul>
+
+Later:
+<ul>
+<li> acs-service-contract
+<li> impliment dotlrn-survey and survey-portlet
+<li> overview of file-storage - think about UI improvements
 </ul>
 
 <p>
@@ -122,6 +134,8 @@ on.
 
 <P>Fixed in all portlets.
 
+<strike><li> "available" portlets: data-model, Tcl API, and web pages</strike>
+<strike><li> implement shade, remove, edit, link from title</strike>
 
 </ul>
 
