@@ -327,8 +327,26 @@
 
   </p>
 
+  <p class="heading">Automatated Installation</p>
 
-  <p class="heading">Reinstalling dotLRN</p>
+  <p class="indent">
+
+
+  <font color=red>(new Oct 11)</font>
+  As an alternative to the manual installation above. Peter Marklund
+  (peter_marklund@fastmail.fm) has developed scripts to automate installation.
+  If you are just starting out with dotlrn, it would be a good idea to 
+  go through the manual installation a few times before trying to use
+  the automated scripts.
+    
+  To get the scripts, use the following commandline:
+
+  <pre>cvs -d :pserver:anonymous:@dotlrn.collaboraid.biz:/cvsroot checkout dotlrn-install</pre>
+
+  </p>
+
+
+  <p class="heading">Manual Re-installation</p>
 
   <p class="indent">
      
