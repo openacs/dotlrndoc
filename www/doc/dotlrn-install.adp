@@ -267,10 +267,11 @@
 
      <ul>
      
-     <li>For the &quot;Main site&quot; (the first row of the table at
+     <li><font color=red>UPDATED (July 18)</font> For the &quot;Main
+     site&quot; (the first row of the table at
      the top of the page), set the &quot;DefaultMaster&quot; parameter
      from <tt>/www/default-master</tt> to
-     <tt>/packages/dotlrn/www/dotlrn-default-master</tt>.
+     <tt>/packages/dotlrn/www/dotlrn-master</tt>.
 
      <li>For the <tt>ACS Kernel</tt> (the first item in the list below
      the table) in the <tt>system-information</tt> section, set the
