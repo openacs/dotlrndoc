@@ -120,24 +120,6 @@
        installation process.
 
     <p class="indent">
-      <font color=red>NEW! (June 16)</font> You have to make one minor
-        modification to the OpenACS sources for dotlrn to work
-        properly. Comment out the
-        <tt>file_storage_post_instantiation</tt> procedure in
-        <kbd>/packages/file-storage/tcl/file-storage-init.tcl</kbd>
-
-    <p class="note">
-        Why do you need to do this? It's a temporary fix for the fact
-        that the file-storage-init.tcl file creates a new root folder
-        per instance of file-storage, but for dotlrn we need to create
-        our own per instance root folder with the instance's pretty
-        name, etc. And since you can't have two root folders for one
-        instance of file-storage, if you don't edit this file you will
-        get a <tt>UNIQUE CONSTRAINT VIOLATION</TT> error. Hence
-        commenting out the init-time root folder creation. We are
-        working on a permanent solution to this.
-
-    <p class="indent">
       You will now have an <tt>/openacs-4</tt> directory with all of
       OpenACS required by dotLRN. To double check, your
       <tt>/openacs-4/packages</tt> directory should look similar to this:
