@@ -8,7 +8,7 @@
 
 <body>
 
-    <table width="95%" border="0" style="padding-left: 1em; padding-right: 1em">
+    <table width="95%" border="0" style="padding-left: 1em; padding-right: 1em; padding-top: 1em;">
       <tr>
         <td><a href="/"><img border=0 src="/dotlrn/images/dotlrn.gif" alt="dotlrn"></a></td>
         <td align=right style="font-weight: bold;">
