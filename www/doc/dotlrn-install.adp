@@ -73,12 +73,10 @@
       Here's the current list of non-core packages needed for dotlrn:
 
     <p class="indent">
-	<font color=red>NEW!</font>Added stuff the list below. (June 13)
-
-    <p class="indent">
-	<font color=red>NEW!</font>the new <tt>notifications</tt> package
-	is required by the new <tt>forums</tt> package (which replaces
-	<tt>bboard</tt> and <tt>sloan-bboard</tt>)
+        <font color=red>NEW! (June 13)&nbsp;</font>the new
+        <tt>notifications</tt> package is required by the new
+        <tt>forums</tt> package (which replaces <tt>bboard</tt> and
+        <tt>sloan-bboard</tt>)
 
       <pre>
       acs-datetime 
@@ -96,36 +94,46 @@
       user-preferences
       developer-support (optional)
       </pre>      
+    </p>
 
+    <p class="indent">
       <strong>Do not install</strong> or <strong>remove</strong> these
-	packages sincethey conflict with dotlrn packages:
+        packages since they conflict with dotlrn packages:
 
       <pre>
       portal (conflicts with new-portal)
       spam (conflicts with bulk-mail)      
       </pre>     
+    </p>
 
     <p class="indent">
       <tt>cd</tt> to the newly created <tt>/openacs-4/packages</tt>
       directory before the next step.
 
     <p class="indent">
-
-      <pre>      
-      cvs -z3 -d :pserver:anonymous@openacs.org:/cvsroot co acs-datetime \
-      acs-events acs-mail-lite bulk-mail calendar faq forums file-storage \
-      general-comments news notifications ref-timezones user-preferences \
-      developer-support
+      <pre> 
+      cvs -z3 -d :pserver:anonymous@openacs.org:/cvsroot co
+      acs-datetime \ acs-events acs-mail-lite bulk-mail calendar faq
+      forums file-storage \ general-comments news notifications
+      ref-timezones user-preferences \ developer-support
       </pre>
 
+    <p class="indent">
+      <font color=red>NEW! (June 16)&nbsp;</font>You have to make one
+        minor modification to the OpenACS sources for dotlrn to work
+        properly. Comment out <strong>ALL</strong> the code in
+        <kbd>/packages/file-storage/tcl/file-storage-init.tcl</kbd>
+
     <p class="note">
-      Installation timesavers: If you have a full checkout of the
-      OpenACS tree (or a nightly tarball), and are setting up a server
-      for dotlrn use only, you can save time by removing modules not
-      in <tt>acs-core</tt> or in the above
-      <tt>checkout</tt> command. Also, cut down the
-      <strong>huge</strong> (10MB!)  files in
-      <tt>/packages/ref-timezones/sql/common/</tt> to a line or two.
+        Why do you need to do this? It's a temporary fix for the fact
+        that the file-storage-init.tcl file creates a new root folder
+        per instance of file-storage, but for dotlrn we need to create
+        our own per instance root folder with the instance's pretty
+        name, etc. And since you can't have two root folders for one
+        instance of file-storage, if you don't edit this file you will
+        get a <tt>UNIQUE CONSTRAINT VIOLATION</TT> error. Hence
+        commenting out the init-time root folder creation. We are
+        working on a permanent solution to this.
 
     <p class="indent">
       You will now have an <tt>/openacs-4</tt> directory with all of OpenACS
