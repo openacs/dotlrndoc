@@ -65,13 +65,6 @@
       Here's the current list of non-core packages needed for dotlrn:
 
     <p class="indent">
-      <font color=red>UPDATED (July 9)</font> <tt>attachments</tt> is
-      a new service package that is used by the new <tt>forums</tt>
-      package and the <tt>calendar</tt> package. The new
-      <tt>forums</tt> package will not conflict with the
-      <tt>bboard</tt> package. The <tt>bboard</tt> package is not
-      reqiured for dotlrn.
-
       <pre>
       acs-datetime
       acs-developer-support (optional)
@@ -92,7 +85,7 @@
     </p>
 
     <p class="note">
-      <strong>Do not install</strong> or <strong>remove</strong> these
+      <strong>Do not install</strong> or, if installed, <strong>remove</strong> these
         packages since they conflict with dotlrn packages: <tt>portal</tt>
         (conflicts with new-portal) and <tt>spam</tt>
         (conflicts with bulk-mail)
@@ -154,7 +147,7 @@
     <p class="indent">
       This will fetch the following packages to your
       <tt>/openacs-4/packages</tt> directory<BR>
-      <font color=red>(Updated July 29: added research-portlet)</font>:
+      <font color=red>(Updated August 29: removed research-portlet and dotlrn-research)</font>:
 
     <p class="indent">
 
@@ -178,15 +171,13 @@
         dotlrn-fs
         news-portlet
         dotlrn-news
-        research-portlet
-        dotlrn-research
         static-portlet
         dotlrn-static
       </pre>
 
     <p class="indent">
 
-      <font color=red>(UPDATED July 9)</font> A few minor
+      A few minor
       modifications of the OpenACS code needs to be done here. First,
       in the <tt>/openacs-4</tt> directory (where you see the <tt>bin,
       CVS, packages ...</tt> directories), make sure a directory named
@@ -206,7 +197,7 @@
       standard OACS installation process until your reach the
       &quot;Congratulations!&quot; front page, then return here.
 
-  <p class="heading">Install dotLRN on your system</>
+  <p class="heading">Install dotLRN on your system</p>
   <p class="indent">
 
      Go the the &quot;ACS Package Manager&quot; (APM) on your system
@@ -247,7 +238,7 @@
 
   <p class="indent">
 
-     <font color=red>UPDATED (July 9)</font> Install the
+     Install the
      &quot;notifications&quot; and &quot;attachments&quot; packages at
      the URL &quot;/notifications&quot; and
      &quot;/attachments&quot;the same way you installed
@@ -264,7 +255,7 @@
 
      <ul>
      
-     <li><font color=red>UPDATED (July 18)</font> For the &quot;Main
+     For the &quot;Main
      site&quot; (the first row of the table at
      the top of the page), set the &quot;DefaultMaster&quot; parameter
      from <tt>/www/default-master</tt> to
