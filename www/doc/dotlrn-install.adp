@@ -73,7 +73,9 @@
       Here's the current list of non-core packages needed for dotlrn:
 
     <p class="indent">
-	<font color=red>NEW!</font> forums replaces bboard and sloan-bboard
+	<font color=red>NEW!</font>the new <tt>notifications</tt> package
+	is required by the new <tt>forums</tt> package (which replaces
+	<tt>bboard</tt> and <tt>sloan-bboard</tt>)
 
       <pre>
       acs-datetime 
@@ -86,14 +88,14 @@
       file-storage
       general-comments
       news
+      notifications
       ref-timezones
       </pre>      
 
-      <strong>Do not install or remove</strong> these packages since they conflict
-      with dotlrn packages:
+      <strong>Do not install</strong> or <strong>remove</strong> these
+	packages sincethey conflict with dotlrn packages:
 
       <pre>
-      bboard (conflicts with sloan-bboard)
       portal (conflicts with new-portal)
       spam (conflicts with bulk-mail)      
       </pre>     
@@ -145,8 +147,9 @@
       <tt>/openacs-4/packages</tt> directory:
 
     <p class="indent">
-	<font color=red>NEW!</font> forums-portlet and dotlrn-forums
-	replaces bboard-portlet and dotlrn-bboard
+	<font color=red>NEW!</font> <tt>forums-portlet</tt> and
+	<tt>dotlrn-forums</tt> replaces <tt>bboard-portlet</tt>
+	and <tt>dotlrn-bboard</tt>
 
     <p class="indent">
 
@@ -156,7 +159,6 @@
         dotlrn-research
         new-portal
         profile-provider
-        sloan-bboard
         user-profile
         bm-portlet 
         dotlrn-bm
