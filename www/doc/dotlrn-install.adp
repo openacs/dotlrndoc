@@ -186,12 +186,12 @@
       </pre>
 
     <p class="indent">
-      <font color=red>(NEW! June 30)</font> A few minor modifications
-      of the OpenACS code needs to be done here. First, in the
-      <tt>/openacs-4</tt> directory (where you see the <tt>bin, CVS,
-      packages ...</tt> directories), create a directory named
-      <tt>content-repository-content-files</tt> having the same
-      permissions as the other directories. Second, create a
+      <font color=red>(UPDATED! July 9)</font> A few minor
+      modifications of the OpenACS code needs to be done here. First,
+      in the <tt>/openacs-4</tt> directory (where you see the <tt>bin,
+      CVS, packages ...</tt> directories), make sure a directory named
+      <tt>content-repository-content-files</tt> exists. If not, create
+      it with the same permissions as the other dirs. Second, create a
       <tt>graphics</tt> directory inside the <tt>www</tt>
       directory. Third, copy all the files in
       <tt>/packages/dotlrn/www/graphics</tt> into the
