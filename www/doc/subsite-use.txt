@@ -1,0 +1,117 @@
+
+Subsite Quicky
+==============
+
+- Group Type: Company
+- Group: OpenForce
+- Relationship Type: Employment
+- Member: Ben Adida
+- Relationship: Ben Adida is employed by OpenForce
+- Relationship Segment: Employees of OpenForce (cross of one Group and one relationship).
+- Site Node: /6.001/bboard is a node of the site
+
+
+
+Ideas for Using Subsite for dotLRN classes
+==========================================
+
+- Group Type: class
+- Group Type: c6001, parent type class.
+- Group Type Arguments for class: Year, enumeration; Semester, enumeration.
+- Group: 6.001 Fall 2002
+- Various packages:
+	  /dotlrn/6.001/fall-2002/bboard
+	  /dotlrn/6.001/fall-2001/file-storage
+- Relationship Types: Student, TA, Professor (possibly others)
+- are relationship types configurable at web level? good question...
+- Relationship Segments: students of a class. TAs of a class. Profs of a class.
+
+- each class has a node, and the packages associated with it are subnodes within it
+
+- the question is permissions: do we permission /6.001/bboard to those
+  who are part of 6.001, or do we permission specific bboards? There
+  are two issues here:
+  1. when going to /6.001/bboard, we want only the 6.001 bboards to be
+  displayed. How we scope this is not yet clear. OKAY! Now it is. If
+  you say "new application" then it effectively creates a new
+  scope. So there is an easy way to scope this! Excellent baby. Very
+  very good.
+  2. when going to /6.001/bboard, we want permissions to be applied
+  correctly with respect to those bboards. That means permissions
+  should be SCOPED to the specific bboards, but the bboard package
+  must be scope-aware to only display the appropriate data.
+
+  3. NEW DATA: Okay, permissions map to each instance of a package. So
+     we can actually set permissions on the instance of the package,
+     and then we're all set. This is very good.
+
+- the issue is how to put together a homepage that encompasses the
+  various data from all classes for a particular student. We might
+  have to write some serious custom code there.
+
+- calendaring information, specifically, where we want to mix in one
+  view all the events for one student.
+
+- when creating a class, we'll create a group, we'll mount the right
+  packages. We'll have to figure out how to create hooks so that
+  creating a bboard in /6.001/bboard will automatically scope and
+  permission things correctly
+
+- we'll create a class manager package that is the basic application
+  that is mounted at /6.001/. This will have to be scope-aware, to
+  display the right name and such. This will allow unsubscribed
+  students to sign up, and subscribed students to immediately see the
+  right info. This package may simply be an extension of the portals
+  package. A modified portals package, or a package that relies on
+  portals.
+
+
+WHAT HAPPENS BEFORE ANY CLASS IS ADDED
+======================================
+
+- All packages that will be needed must be loaded and installed
+- All data model and Tcl files initialized correctly
+- We don't ever want to restart the server afterwards!!
+
+- Group Type "Class" is created with appropriate attributes
+  - Semester
+  - Year
+  
+
+
+WHAT HAPPENS WHEN A NEW CLASS IS CREATED
+========================================
+
+- A group of the proper type is created for the class
+- Admins for this class are created
+- A node is created at /<class_name>
+- The Class Manager application is mounted at /<class_name>
+- All chosen packages are mounted at /<class_name>/<package_name>
+
+
+WHAT HAPPENS WHEN A USER JOINS A CLASS
+======================================
+
+- user is added to that group
+
+
+SOFTWARE STRUCTURE
+==================
+
+- each package for DOTLRN will be a small package that depends on:
+  - the main package like bboard
+  - the portlet package like bboard-portlet
+
+- so a package will be like dotlrn-bboard
+
+
+
+IMPORTANT POINTS TO CONSIDER
+============================
+
+- WOW: we might want to have a class like 6.001 be a group TYPE, with
+  each semester being a specific group of that group type. Let's
+  investigate this some more!!
+
+==> YES we will do this.
+

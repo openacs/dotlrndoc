@@ -1,0 +1,5 @@
+
+This is the site for documenting dotLRN stuff. Set up by Ben (ben@openforce.net).
+Started on 09/04/2001.
+
+
