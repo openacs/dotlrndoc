@@ -5,7 +5,7 @@
 
     <p class="indent">part of <a href=../>dotLRN</a>
 
-    <p class="indent">Last updated: $Date$
+    <p class="indent"><small>Last updated: $Date$</small>
 
     <p class="heading">Contents
     
@@ -26,7 +26,8 @@
 
         dotLRN is a full-featured application for rapidly developing
         web-based learning communities, specifically in the context of
-        Course Management. The dotLRN software relies on <a
+        Course Management. The dotLRN software relies on a development
+	version of <a
         href=http://openacs.org>OpenACS v4.5</a> and includes data model,
         application logic, and templates to get you up and running very
         quickly.
