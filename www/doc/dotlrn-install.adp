@@ -113,9 +113,7 @@
      &quot;Install packages&quot; link. After the installer loads, you
      will see a list of the dotlrn packages you just got from
      CVS. Install them, return to the main APM page, and <b>restart
-     your server</b>. After a few moments, refresh the main APM, and
-     you should see <tt>dotlrn</tt>, <tt>new-portal</tt>, etc. in the
-     list.
+     your server</b>. 
   </p>
 
   <p class="indent">
@@ -149,17 +147,10 @@
   <p class="indent">
   
      <b>You must now restart your server, wait, and reload the
-     &quot;Site Map&quot; page in your browser</b> Why you ask? We do
-     some initialization things once dotlrn is mounted at a URL, as
-     opposed to just being installed as a package.
-
-  </p>
-
-  <p class="indent">
-
-     After the server restarts, refresh the &quot;Site Map&quot;. You
-     will see a &quot;(+)&quot; to the left of the dotlrn/ URL and a new
-     URL: &quot;portal/&quot; with application &quot;new-portal&quot;. 
+     &quot;Site Map&quot; page in your browser</b> After the server
+     restarts, refresh the &quot;Site Map&quot;. You will see a
+     &quot;(+)&quot; to the left of the dotlrn/ URL and a new URL:
+     &quot;portal/&quot; with application &quot;new-portal&quot;.
 
   </p>
 
@@ -170,7 +161,7 @@
 
   </p>
 
-  <!-- FIXME: Add note about developer-support here -->
+  <!-- TODO: Add note about developer-support here -->
 
   <p class="indent">
 
@@ -181,14 +172,7 @@
 
   </p>
 
-  <p class="note">
-
-     The New Portal package requires the CSS imbeded in the
-     dotlrn-default-master files or XXX
-
-  </p>
-
-  <!-- XXX re-vamp this section -->
+  <!-- TODO: re-vamp this section -->
 
   <p class="heading">Explore dotLRN</p>
 
@@ -232,11 +216,10 @@
      process.
 
      <ol>
-       <li>Stop <tt>aolserver</tt> and any open <tt>sqlplus</tt> sessions
-       <li>Create a drop/create user script. Lars has a swift <a 
-           href="http://pinds.com/acs-tips">tool</a> to help you create
-           one. XXX compare with mine XXX
-       <li>In a shell, type:
+       <li>Stop <tt>aolserver</tt> and any open <tt>sqlplus</tt>
+       sessions <li>Create a drop/create user script. Lars has a swift
+       <a href="http://pinds.com/acs-tips/oracle-statements">tool</a>
+       to help you create one.  <li>In a shell, type:
          <pre class="code">
            % sqlplus internal < my-drop-create-script.sql
          </pre>
