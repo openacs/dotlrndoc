@@ -97,8 +97,8 @@
     <p class="note">
       <strong>Do not install</strong> or <strong>remove</strong> these
         packages since they conflict with dotlrn packages: <tt>portal</tt>
-	(conflicts with new-portal) and <tt>spam</tt>
-	(conflicts with bulk-mail)
+        (conflicts with new-portal) and <tt>spam</tt>
+        (conflicts with bulk-mail)
     </p>
 
     <p class="indent">
@@ -126,15 +126,15 @@
 
       <pre>
         $ ls
-        acs-admin		 acs-kernel	       acs-templating  general-comments
-        acs-api-browser		 acs-mail	       acs-util        news
-        acs-bootstrap-installer  acs-mail-lite	       acs-workflow    notifications
-        acs-content		 acs-messaging	       bulk-mail       page
-        acs-content-repository	 acs-notification      calendar        ref-timezones
-        acs-core-docs		 acs-reference	       CVS	       search
-        acs-datetime		 acs-service-contract  faq	       skin
-        acs-developer-support	 acs-subsite	       file-storage    user-preferences
-        acs-events		 acs-tcl	       forums
+        acs-admin                acs-kernel            acs-templating  general-comments
+        acs-api-browser          acs-mail              acs-util        news
+        acs-bootstrap-installer  acs-mail-lite         acs-workflow    notifications
+        acs-content              acs-messaging         bulk-mail       page
+        acs-content-repository   acs-notification      calendar        ref-timezones
+        acs-core-docs            acs-reference         CVS             search
+        acs-datetime             acs-service-contract  faq             skin
+        acs-developer-support    acs-subsite           file-storage    user-preferences
+        acs-events               acs-tcl               forums
       </pre>
 
     <p class="heading">Get dotLRN from CVS</p>
@@ -175,8 +175,8 @@
         dotlrn-dotlrn
         faq-portlet
         dotlrn-faq
-	forums-portlet
-	dotlrn-forums
+        forums-portlet
+        dotlrn-forums
         fs-portlet
         dotlrn-fs
         news-portlet
@@ -332,10 +332,10 @@
      process.
 
     <p class="indent">
-	<strong>Important note:</strong>If you have the dotlrn-survey,
-	and/or survey-portlet directories on your system, please delete them as
-	they are no longer part of the <tt>dotlrn-core</tt> packages. If you	
-	are not using simple-survey aside from dotlrn, you can delete that too.
+        <strong>Important note:</strong>If you have the dotlrn-survey,
+        and/or survey-portlet directories on your system, please delete them as
+        they are no longer part of the <tt>dotlrn-core</tt> packages. If you    
+        are not using simple-survey aside from dotlrn, you can delete that too.
 
      <ol>
        <li>Stop <tt>aolserver</tt> and any open <tt>sqlplus</tt>
