@@ -115,7 +115,7 @@
 
     <p class="note">
        Installation timesaver: In the <tt>/packages/ref-timezones/sql/common/</tt>
-       directory, cut down the files to a few <tt>insert</tt> statements apeace.
+       directory, cut down the files to a few <tt>insert</tt> statements apiece.
        This is fine for test system, and will save you alot of time in the
        installation process.
 
