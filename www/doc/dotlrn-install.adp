@@ -51,22 +51,17 @@
        Downloads&quot;! Continue on with this document.
 
     <p class="indent">
-      If you have an account on openacs.org, do this:
-      
-      <pre>      
-      (set the CVS_RSH variable in your shell envrioment to &quot;ssh&quot;)
-      cvs -z3 -d youraccount@openacs.org:/cvsroot checkout acs-core
-      (enter your openacs.org password)
-      </pre>
-
-    <p class="indent">
-      If you have an don't have an account on openacs.org, do this:
 
       <pre>      
       cvs -d :pserver:anonymous@openacs.org:/cvsroot login
       (just hit return for the password)
       cvs -z3 -d :pserver:anonymous@openacs.org:/cvsroot checkout acs-core
       </pre>
+      
+    <p class="note">
+      CVS commandlines are given in terms of anonymous users, if you have an
+      account on openacs.org, use your login where appropriate. Don't forget to 
+      set the CVS_RSH variable in your shell envrioment to &quot;ssh&quot;.
 
     <p class="indent">
 
@@ -75,34 +70,50 @@
       source tree. Next are the commands to get these modules.
 
     <p class="indent">
+      Here's the current list of non-core packages needed for dotlrn:
+
+      <pre>
+      acs-datetime 
+      acs-events
+      acs-interface
+      acs-mail-lite
+      bulk-mail
+      calendar
+      faq
+      file-storage
+      general-comments
+      news
+      ref-timezones
+      simple-survey
+      </pre>      
+
+      <strong>Do not install or remove</strong> these packages since they conflict
+      with dotlrn packages:
+
+      <pre>
+      bboard (conflicts with sloan-bboard)
+      portal (conflicts with new-portal)
+      spam (conflicts with bulk-mail)      
+      </pre>     
+
+    <p class="indent">
       <tt>cd</tt> to the newly created <tt>/openacs-4/packages</tt>
       directory before the next step.
 
     <p class="indent">
 
-      If you have an account on openacs.org, do this:
-      
       <pre>      
-      cvs -z3 -d youraccount@openacs.org:/cvsroot checkout acs-datetime \ 
-      acs-events acs-interface calendar faq file-storage \
-      general-comments news ref-timezones simple-survey spam 
-      (enter your openacs.org password)
-      </pre>
-
-    <p class="indent">
-      If you have an don't have an account on openacs.org, do this:
-
-      <pre>      
-      cvs -z3 -d :pserver:anonymous@openacs.org:/cvsroot checkout acs-datetime \
-      acs-events acs-interface calendar faq file-storage \
-      general-comments news ref-timezones simple-survey spam
+      cvs -z3 -d :pserver:anonymous@openacs.org:/cvsroot co acs-datetime \
+      acs-events acs-interface acs-mail-lite bulk-mail calendar faq file-storage \
+      general-comments news ref-timezones simple-survey
       </pre>
 
     <p class="note">
       Installation timesavers: If you have a full checkout of the
-      OpenACS tree, or are trying a nightly tarball, remove all the
-      modules not in <tt>acs-core</tt> or in the above
-      <tt>checkout</tt> commands. Also, cut down the
+      OpenACS tree (or a nightly tarball), and are setting up a server
+      for dotlrn use only, you can save time by removing modules not
+      in <tt>acs-core</tt> or in the above
+      <tt>checkout</tt> command. Also, cut down the
       <strong>huge</strong> (10MB!)  files in
       <tt>/packages/ref-timezones/sql/common/</tt> to a line or two.
 
@@ -131,30 +142,34 @@
       This will fetch the following packages to your
       <tt>/openacs-4/packages</tt> directory:
 
+    <p class="indent">
+
       <pre>
-      dotlrn
-      dotlrn-syllabus
-      dotlrn-research
-      new-portal
-      profile-provider
-      sloan-bboard
-      user-profile
-      bboard-portlet
-      dotlrn-bboard
-      calendar-portlet
-      dotlrn-calendar
-      dotlrn-portlet
-      dotlrn-dotlrn
-      faq-portlet
-      dotlrn-faq
-      fs-portlet
-      dotlrn-fs
-      news-portlet
-      dotlrn-news
-      static-portlet
-      dotlrn-static
-      survey-portlet
-      dotlrn-survey
+        dotlrn
+        dotlrn-syllabus
+        dotlrn-research
+        new-portal
+        profile-provider
+        sloan-bboard
+        user-profile
+        bboard-portlet
+        dotlrn-bboard
+        bm-portlet 
+        dotlrn-bm
+        calendar-portlet
+        dotlrn-calendar
+        dotlrn-portlet
+        dotlrn-dotlrn
+        faq-portlet
+        dotlrn-faq
+        fs-portlet
+        dotlrn-fs
+        news-portlet
+        dotlrn-news
+        static-portlet
+        dotlrn-static
+        survey-portlet
+        dotlrn-survey
       </pre>
 
     <p class="indent">
@@ -229,7 +244,7 @@
 
   <p class="indent">
 
-     One last step: Then set the &quot;DefaultMaster&quot; parameter
+     <strong>One last step</strong>: Then set the &quot;DefaultMaster&quot; parameter
      of the Root (&quot;Main site&quot;) from
      <tt>/www/default-master</tt> to
      <tt>/packages/dotlrn/www/dotlrn-default-master</tt>
