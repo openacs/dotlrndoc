@@ -90,6 +90,8 @@
       news
       notifications
       ref-timezones
+      user-preferences
+      developer-support (optional)
       </pre>      
 
       <strong>Do not install</strong> or <strong>remove</strong> these
@@ -108,8 +110,9 @@
 
       <pre>      
       cvs -z3 -d :pserver:anonymous@openacs.org:/cvsroot co acs-datetime \
-      acs-events acs-mail-lite bulk-mail calendar faq file-storage \
-      general-comments news notifications ref-timezones
+      acs-events acs-mail-lite bulk-mail calendar faq forums file-storage \
+      general-comments news notifications ref-timezones user-preferences \
+      developer-support
       </pre>
 
     <p class="note">
