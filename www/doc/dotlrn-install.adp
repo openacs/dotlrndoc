@@ -1,4 +1,4 @@
-<%= [dotlrn_header "dotLRN Home - OpenForce"] %>
+<%= [dotlrn_header "Installing dotLRN - OpenForce"] %>
 
 <div class="indent">
 
@@ -6,12 +6,13 @@
 
     <p class="indent">part of <a href="../">dotLRN</a></p>
 
+    <p class="indent"><small>Last updated: $Date$</small>
 
-	<p class="heading">Contents</p>
+    <p class="heading">Contents</p>
 
     <ul>
         <li>Read the dotLRN FAQ
-        <li>Install OpenACS v4.5 from CVS (not beta1!)
+        <li>Get and Install OpenACS from development CVS
         <li>Get dotLRN from CVS
         <li>Install dotLRN on your system
         <li>Explore dotLRN
@@ -19,7 +20,7 @@
     </ul>
 
 
-	<p class="heading">Read the <a href="dotlrn-faq.adp">dotLRN FAQ</a></p>
+    <p class="heading">Read the <a href="dotlrn-faq.adp">dotLRN FAQ</a></p>
 
     <p class="indent">
 
@@ -29,81 +30,137 @@
 
     </p>
 
-
-    <p class="heading">Install OpenACS v4.5 from CVS (not beta1!)</p>
+    <p class="heading">Get and Install OpenACS from development CVS</p>
 
     <p class="note">
 
-       If you have a working OpenACS v4.5 installation from CVS, skip
-       to the next section.
+       If you have a working OpenACS installation from the latest
+       development CVS, skip to the next section.
 
     </p>
 
     <p class="indent">
+       
+       If you are installing OpenACS, follow the extensive
+       installation <a
+       href="http://openacs.org/doc/openacs-4">documenation</a>.
+       <strong>Stop</strong> at the <a
+       href="http://openacs.org/doc/openacs-4/openacs.html">point</a>
+       where the OpenACS installation instructions tell you to
+       &quot;download OpenACS&quot;. Don't use the &quot;Quick
+       Downloads&quot;! Continue on with this document.
 
-        If you don't have a working copy of OpenACS v4.5 (from current
-        CVS), follow the extensive installation <a
-        href="http://openacs.org/doc/openacs-4">documenation</a>. At
-        the <a
-        href="http://openacs.org/doc/openacs-4/openacs.html">point</a>
-        where the OpenACS installation instructions tell you to
-        &quot;download OpenACS&quot;, <a
-        href="http://openacs.org/new-file-storage/download/cvs.html?version_id=140">
-        get a current CVS checkout of OpenACS v4.5</a> from the CVS
-        server. Alternatively, it may be possible to use a <a
-        href="http://openacs.org/sdm/nightly-tarballs.tcl?package_id=9">nighly
-        tarball of OpenACS v4.5</a> and avoid dealing with CVS, but we
-        don't test this method and the warnings on the page apply.
+    <p class="indent">
+      If you have an account on openacs.org, do this:
+      
+      <pre>      
+      (set the CVS_RSH variable in your shell envrioment to &quot;ssh&quot;)
+      cvs -z3 -d youraccount@openacs.org:/cvsroot checkout acs-core
+      (enter your openacs.org password)
+      </pre>
 
-    </p>
+    <p class="indent">
+      If you have an don't have an account on openacs.org, do this:
+
+      <pre>      
+      cvs -d :pserver:anonymous@openacs.org/cvsroot login
+      (just hit return for the password)
+      cvs -z3 -d :pserver:anonymous@openacs.org:/cvsroot checkout acs-core
+      </pre>
+
+    <p class="indent">
+
+      dotLRN requires some more modules that are not in
+      <tt>acs-core</tt>, but not all of the packages in the OpenACS
+      source tree. Next are the commands to get these modules.
+
+    <p class="indent">
+
+      If you have an account on openacs.org, do this:
+      
+      <pre>      
+      cvs -z3 -d youraccount@openacs.org:/cvsroot checkout acs-datetime \ 
+      acs-events acs-interface calendar faq file-storage \
+      general-comments news ref-timezones simple-survey spam 
+      (enter your openacs.org password)
+      </pre>
+
+    <p class="indent">
+      If you have an don't have an account on openacs.org, do this:
+
+      <pre>      
+      cvs -z3 -d :pserver:anonymous@openacs.org:/cvsroot checkout acs-datetime \ 
+      acs-events acs-interface calendar faq file-storage \
+      general-comments news ref-timezones simple-survey spam
+      </pre>
 
     <p class="note">
+      Installation timesavers: If you have a full checkout of the
+      OpenACS tree, or are trying a nightly tarball, remove all the
+      modules not in <tt>acs-core</tt> or the above
+      <tt>checkout</tt> commands. Also, cut down the huge
+      files in <tt>/packages/ref-timezones/sql/common/</tt> to a few
+      lines.
 
-        dotLRN dosen't use all of the modules in the OpenACS cvs
-        tree. If you are installing for dotLRN only, you can save lots
-        of time during the installation by checking out <b>only</b>
-        the following modules: <tt>acs-core acs-datetime acs-events
-        acs-interface acs-reference calendar faq file-storage
-        general-comments news ref-timezones simple-survey spam</tt> If
-        you already have a CVS checkout or the nightly tarball, remove
-        the packages not in the above list.
-
-    </p>
-
-    <p class="note">
-
-        Another installation timesaver is to cut down the huge files
-        in <tt>/packages/ref-timezones/sql/common/</tt> to a few
-        lines. This is fine for testing.
-
-    </p>    
-
+    <p class="indent">
+      You will now have an <tt>/openacs-4</tt> directory with all of OpenACS
+      required by dotLRN. 
 
     <p class="heading">Get dotLRN from CVS</p>
 
     <p class="indent">
-
        Getting dotLRN from CVS is just like getting OpenACS from CVS
        with a different CVSROOT.
 
-    </p>
-
     <p class="indent">
 
-       In your <tt>/packages</tt> directory issue the following commands:
+      Change to your <tt>/openacs-4/packages</tt> directory issue the
+      following commands:
        
-       <pre class="code">
+      <pre>
+      cvs -d :pserver:anonymous@dotlrn.openforce.net:/dotlrn-cvsroot login
+      (hit return for prompted for password)
+      cvs -z3 -d :pserver:anonymous@dotlrn.openforce.net:/dotlrn-cvsroot co dotlrn-core       
+      </pre>
 
-         cvs -d :pserver:anonymous@dotlrn.openforce.net:/dotlrn-cvsroot login
-         
-         (hit return for prompted for password)
-         
-         cvs -z3 -d :pserver:anonymous@dotlrn.openforce.net:/dotlrn-cvsroot co dotlrn-core
+    <p class="indent">
+      This will fetch the following packages to your
+      <tt>/openacs-4/packages</tt> directory:
 
-       </pre>
+      <pre>
+      dotlrn
+      dotlrn-syllabus
+      dotlrn-research
+      new-portal
+      profile-provider
+      sloan-bboard
+      user-profile
+      bboard-portlet
+      dotlrn-bboard
+      calendar-portlet
+      dotlrn-calendar
+      dotlrn-portlet
+      dotlrn-dotlrn
+      faq-portlet
+      dotlrn-faq
+      fs-portlet
+      dotlrn-fs
+      news-portlet
+      dotlrn-news
+      static-portlet
+      dotlrn-static
+      survey-portlet
+      dotlrn-survey
+      </pre>
 
-   </p>
-  
+    <p class="indent">
+      Next, copy the <tt>/openacs-4</tt> directory to where ever you
+      prefer your webserver root to be, traditionally
+      <tt>/web</tt>. Now you can continue with the OACS <a
+      href="http://openacs.org/doc/openacs-4/openacs.html">installation
+      document</a> at the third bullet point. Continue with the
+      standard OACS installation process until your reach the
+      &quot;Congratulations!&quot; front page, then return here.
 
   <p class="heading">Install dotLRN on your system</>
   <p class="indent">
