@@ -63,7 +63,7 @@
       If you have an don't have an account on openacs.org, do this:
 
       <pre>      
-      cvs -d :pserver:anonymous@openacs.org/cvsroot login
+      cvs -d :pserver:anonymous@openacs.org:/cvsroot login
       (just hit return for the password)
       cvs -z3 -d :pserver:anonymous@openacs.org:/cvsroot checkout acs-core
       </pre>
@@ -73,6 +73,10 @@
       dotLRN requires some more modules that are not in
       <tt>acs-core</tt>, but not all of the packages in the OpenACS
       source tree. Next are the commands to get these modules.
+
+    <p class="indent">
+      <tt>cd</tt> to the newly created <tt>/openacs-4/packages</tt>
+      directory before the next step.
 
     <p class="indent">
 
@@ -89,7 +93,7 @@
       If you have an don't have an account on openacs.org, do this:
 
       <pre>      
-      cvs -z3 -d :pserver:anonymous@openacs.org:/cvsroot checkout acs-datetime \ 
+      cvs -z3 -d :pserver:anonymous@openacs.org:/cvsroot checkout acs-datetime \
       acs-events acs-interface calendar faq file-storage \
       general-comments news ref-timezones simple-survey spam
       </pre>
@@ -97,10 +101,10 @@
     <p class="note">
       Installation timesavers: If you have a full checkout of the
       OpenACS tree, or are trying a nightly tarball, remove all the
-      modules not in <tt>acs-core</tt> or the above
-      <tt>checkout</tt> commands. Also, cut down the huge
-      files in <tt>/packages/ref-timezones/sql/common/</tt> to a few
-      lines.
+      modules not in <tt>acs-core</tt> or in the above
+      <tt>checkout</tt> commands. Also, cut down the
+      <strong>huge</strong> (10MB!)  files in
+      <tt>/packages/ref-timezones/sql/common/</tt> to a line or two.
 
     <p class="indent">
       You will now have an <tt>/openacs-4</tt> directory with all of OpenACS
@@ -213,8 +217,11 @@
 
   <p class="note">
 
-     Aren't seeing the &quot(+)&quot; beside dotlrn/? Did you restart
-     your server?
+     Aren't seeing the &quot(+)&quot; beside <tt>dotlrn/</tt>?
+     Something went wrong. Did you restart your server? Restart again
+     while doing a <tt>tail -f</tt> of the error log. <tt>Unique constraint
+     violations</tt> while creating certain site-nodes are a known issue,
+     but any other errors should be reported to us.
 
   </p>
 
