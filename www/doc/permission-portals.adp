@@ -90,6 +90,7 @@ permisson on the newly created portal.
 	<li>Toggle "lock" on a portal element
 	<li>Set this portal page to be "cloned" from
 	<li>Set "non-user" parameters for elements
+	<li>Toggle portal element "availability"
 	</ul> 
 <li>Granted to: A portal created with the CREATE permisson.
 </ul>
