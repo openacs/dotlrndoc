@@ -109,7 +109,7 @@
       <pre>      
       cvs -z3 -d :pserver:anonymous@openacs.org:/cvsroot co acs-datetime \
       acs-events acs-mail-lite bulk-mail calendar faq file-storage \
-      general-comments news ref-timezones
+      general-comments news notifications ref-timezones
       </pre>
 
     <p class="note">
