@@ -34,7 +34,7 @@ Here's what we need to do to finish core:
 <li> Automatically redirect single-community guests to the right location.
 <li> <strike>Fix registration/deregistration bugs!</strike>
 <li> Get clubs working
-<li> !! Figure out Relational Segments !!
+<li> <strike>!! Figure out Relational Segments !!</strike>
 </ul>
 
 <h3>Operations</h3>

@@ -14,6 +14,7 @@ part of <a href=../>dotLRN</a>
 <li> <a href=architecture-overview.adp>Architecture Overview</a>
 <p>
 
+<li> <a href=sloan-bboard.adp>Sloan Bboard</a>
 <li> <a href=openacs/>Building OpenACS 4.x Applications</a>
 </ul>
 
