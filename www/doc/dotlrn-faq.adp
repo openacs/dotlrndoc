@@ -204,6 +204,6 @@
     capitalization <tt>dotLRN</tt> is preferred. hackers who type a
     lot usually write <tt>dotlrn</tt>. <tt>dotLRN</tt> is pronounced
     &quot;daught-learn&quot; We are currently accepting voice
-    applications for the dotLRN MP3 pronounciation file.
+    applications for the dotLRN MP3 pronunciation file.
 
 </div>
